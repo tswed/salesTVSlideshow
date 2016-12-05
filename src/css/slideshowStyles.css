@@ -1,0 +1,23 @@
+/* Change body background-color to change fade out color. */
+/*body.siteshow { margin:0; padding:0; background-color:#000000;}*/
+#menu
+{
+    font-family:Arial;
+    font-size:9pt;
+    display:none;
+    opacity:0.00;
+    -mozopacity:0.00;
+    filter:alpha(opacity=0);
+    position:absolute;
+    top:10px;
+    left:10px;
+    padding:5px;
+    background-color:#000000;
+    color:#FFFFFF;
+    border:3px dotted #999999;
+}
+#menu a { color:#ffffff; }
+#menu a:hover { text-decoration:none; }
+#title { font-size:11pt; font-weight:bold; letter-spacing:2; }
+#slideFrame { font-size:9pt; line-height:16pt; }
+.button { width:60px; font-size:9pt; letter-spacing:1; }
