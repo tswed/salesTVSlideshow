@@ -10,7 +10,7 @@ var transitionTime = 60000;
 var menu;
 var content;
 var currentDate = new Date();
-var isAfterHours;
+var isDuringDay;
 var advanceSlide;
 
 window.onload = loadPage;
@@ -28,24 +28,20 @@ function loadPage() {
 }
 
 function changeSlide() {
-    isAfterHours = checkTime();
+    isDuringDay = checkTime();
 
-    if (isAfterHours) {
-        pauseShow();
+    if (isDuringDay) {
+        content.src = URLs[++siteIndex];
+
+        if (siteIndex > URLs.length) {
+            siteIndex = -1;
+        }
+
+        transitionTime = displayTimes[siteIndex] * 1000;
+        nextSlide();
     }
 
-    content.src = URLs[++siteIndex];
-
-    if (siteIndex > URLs.length) {
-        siteIndex = -1;
-    }
-
-    transitionTime = displayTimes[siteIndex] * 1000;
-    nextSlide();
-}
-
-function pauseShow() {
-    window.clearTimeout(advanceSlide);
+    setTimeout(changeSlide, 0);
 }
 
 function nextSlide() {
@@ -53,7 +49,7 @@ function nextSlide() {
 }
 
 function checkTime() {
-    if (currentDate.getHours() >= 11 && currentDate.getHours() < 14) {
+    if (currentDate.getHours() >= 8 && currentDate.getHours() <= 17) {
         return true;
     }
     return false;
