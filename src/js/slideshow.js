@@ -40,8 +40,9 @@ function changeSlide() {
         transitionTime = displayTimes[siteIndex] * 1000;
         nextSlide();
     }
-
-    setTimeout(changeSlide, 0);
+    else {
+        setTimeout(changeSlide, 0);
+    }
 }
 
 function nextSlide() {
