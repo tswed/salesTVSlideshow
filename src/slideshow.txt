@@ -1,6 +1,6 @@
-https://maps.youversion.com/crossway, 10;
-http://intra.gnpcb.org/dashboard/top.customers.month.php, 10;
-https://docs.google.com/spreadsheets/d/1Hg6vWIiHP5m_xhb05Ck5nAIFriByyrKEMqZfg_EVIIo/edit?usp=sharing, 10;
+https://maps.youversion.com/crossway, 240;
+http://intra.gnpcb.org/dashboard/top.customers.month.php, 60;
+https://docs.google.com/spreadsheets/d/1Hg6vWIiHP5m_xhb05Ck5nAIFriByyrKEMqZfg_EVIIo/edit?usp=sharing, 60;
 http://intra.gnpcb.org/dashboard/top.customers.rytd.php, 60;
 http://intra.gnpcb.org/dashboard/top.products.month.php?inventory_type=book&period_type=m, 60;
 http://intra.gnpcb.org/dashboard/top.products.month.php?inventory_type=bible&period_type=m, 60;

@@ -19,7 +19,7 @@ function loadPage() {
     content = document.getElementById('slideFrame');
     menu = document.getElementById('menu');
 
-    getURLs("../../slideshow.txt");
+    getURLs("../slideshow.txt");
     content.src = URLs[0];
 
     transitionTime = displayTimes[siteIndex] * 1000;
