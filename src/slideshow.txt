@@ -1,3 +1,4 @@
+http://salestvmini:5601/app/kibana#/dashboard/tswed_bible_dashboard_R12?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1y,mode:quick,to:now))&_a=(filters:!(),options:(darkTheme:!t),panels:!((col:1,id:tswed_bible_totals_metric,panelIndex:5,row:1,size_x:12,size_y:1,type:visualization),(col:1,id:tswed_top_25_bibles,panelIndex:1,row:2,size_x:6,size_y:9,type:visualization),(col:7,id:tswed_bibles_by_customer,panelIndex:3,row:2,size_x:6,size_y:4,type:visualization),(col:7,id:tswed_bibles_by_category,panelIndex:4,row:6,size_x:6,size_y:4,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:tswed_bible_dashboard_R12,uiState:(P-1:(spy:(mode:(fill:!f,name:!n)),vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true, 180;
 https://maps.youversion.com/crossway, 240;
 http://intra.gnpcb.org/dashboard/top.customers.month.php, 60;
 https://docs.google.com/spreadsheets/d/1Hg6vWIiHP5m_xhb05Ck5nAIFriByyrKEMqZfg_EVIIo/edit?usp=sharing, 60;
@@ -7,3 +8,4 @@ http://intra.gnpcb.org/dashboard/top.products.month.php?inventory_type=bible&per
 http://intra.gnpcb.org/dashboard/top.products.month.php?inventory_type=book&period_type=r, 60;
 http://intra.gnpcb.org/dashboard/top.products.month.php?inventory_type=bible&period_type=r, 60;
 http://intra.gnpcb.org/dashboard/main.dashboard.php, 60
+
