@@ -24,13 +24,13 @@ http://salestvmini:5601/app/kibana#/dashboard/Book-Dashboard-CM?_g=(refreshInter
 time:(from:now%2FM,mode:relative,to:now%2FM))&_a=(filters:!(),options:(darkTheme:!t),panels:!((col:1,id:Book-Totals-Metric,
 panelIndex:1,row:1,size_x:12,size_y:2,type:visualization),(col:1,id:Top-25-Books,panelIndex:4,row:3,size_x:6,size_y:9,type:visualization),
 (col:7,id:Books-by-Customer,panelIndex:3,row:3,size_x:6,size_y:6,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),
-title:'Book+Dashboard+CM',uiState:(P-4:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | December Book Sales | 18;
+title:'Book+Dashboard+CM',uiState:(P-4:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | December Book Sales | 180;
 
 http://salestvmini:5601/app/kibana#/dashboard/Top-10-Customers-R3-Years?_g=(refreshInterval:(display:'2+hour',pause:!f,section:3,value:7200000),
 time:(from:now-3y,mode:relative,to:now))&_a=(filters:!(),options:(darkTheme:!t),panels:!((col:1,id:Top-10-Customers,panelIndex:2,
 row:1,size_x:5,size_y:5,type:visualization),(col:6,id:Top-10-Customers-by-Category,panelIndex:3,row:1,size_x:7,size_y:5,type:visualization),
 (col:1,id:Top-10-Customers-Table,panelIndex:1,row:6,size_x:12,size_y:6,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),
-title:'Top+10+Customers+R3+Years',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | R3 Years Customer Growth | 18;
+title:'Top+10+Customers+R3+Years',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | R3 Years Customer Growth | 180;
 
 http://salestvmini:5601/app/kibana#/dashboard/International-Sales-R12?_g=(refreshInterval:(display:Off,pause:!f,value:0),
 time:(from:now-1y,mode:relative,to:now))&_a=(filters:!(),options:(darkTheme:!t),panels:!((col:1,id:International-Sales-by-Category,
@@ -38,4 +38,4 @@ panelIndex:2,row:1,size_x:6,size_y:4,type:visualization),(col:7,id:International
 type:visualization),(col:1,id:International-Resale-Accounts,panelIndex:1,row:5,size_x:4,size_y:10,type:visualization),
 (col:5,id:Top-25-Books-International,panelIndex:5,row:5,size_x:4,size_y:10,type:visualization),(col:9,id:Top-25-Bibles-International,panelIndex:4,row:5,size_x:4,size_y:10,
 type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:'International+Sales+R12',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),
-P-4:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-5:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | R12 International Sales | 18;
+P-4:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-5:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))&embed=true | R12 International Sales | 180;
