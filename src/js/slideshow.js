@@ -2,11 +2,13 @@
  * Created by tswed on 9/3/16.
  */
 
-var siteIndex = 0;
 var URLs = [];
+var singleSlide = [];
+var siteIndex = 0;
+var allSlideInfo = [];
 var displayTimes = [];
+var slideTitles = [];
 var transitionTime = 60000;
-
 var menu;
 var content;
 var currentDate = new Date();
@@ -19,8 +21,11 @@ function loadPage() {
     content = document.getElementById('slideFrame');
     menu = document.getElementById('menu');
 
-    getURLs("../slideshow.txt");
+    readFile("../slideshow.txt");
+
     content.src = URLs[0];
+
+    displayTitle(0);
 
     transitionTime = displayTimes[siteIndex] * 1000;
 
@@ -32,6 +37,7 @@ function changeSlide() {
 
     if (isDuringDay) {
         content.src = URLs[++siteIndex];
+        displayTitle(siteIndex);
 
         if (siteIndex > URLs.length) {
             siteIndex = -1;
@@ -45,6 +51,10 @@ function changeSlide() {
     }
 }
 
+function displayTitle(siteIndex) {
+    document.getElementById("slideTitle").innerHTML = slideTitles[siteIndex];
+}
+
 function nextSlide() {
     advanceSlide = setTimeout(changeSlide, transitionTime);
 }
@@ -56,7 +66,7 @@ function checkTime() {
     return false;
 }
 
-function getURLs(file) {
+function readFile(file) {
     {
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
@@ -68,15 +78,14 @@ function getURLs(file) {
                 if (rawFile.status === 200 || rawFile.status == 0) {
 
                     var allText = rawFile.responseText;
-                    allText = allText.replace(/[\n\r\s]/g, '');
 
-                    URLs = allText.split(';');
+                    allText = allText.replace(/[\n\r]/g, '');
 
-                    for (var i=0; i < URLs.length; i++) {
-                        var commaIndex = URLs[i].lastIndexOf(",");
+                    allSlideInfo = allText.split(';');
 
-                        displayTimes[i] = URLs[i].slice(commaIndex + 1, URLs[i].length);
-                        URLs[i] = URLs[i].substring(0, commaIndex);
+                    for (var i = 0; i < allSlideInfo.length; i++) {
+                        singleSlide = allSlideInfo[i].split("|");
+                        loadSlideShow(singleSlide, i);
                     }
                 }
             } else {
@@ -86,3 +95,10 @@ function getURLs(file) {
         rawFile.send(null);
     }
 }
+
+function loadSlideShow(singleSlide, i) {
+    URLs[i] = singleSlide[0];
+    slideTitles[i] = singleSlide[1];
+    displayTimes[i] = singleSlide[2];
+}
+
