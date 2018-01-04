@@ -25,7 +25,7 @@ function loadPage() {
     displayTime();
     displayTitle(0);
 
-    transitionTime = displayTimes[siteIndex] * 100;
+    transitionTime = displayTimes[siteIndex] * 1000;
 
     advanceSlide = setTimeout(changeSlide, transitionTime);
 }
@@ -50,7 +50,7 @@ function changeSlide() {
         siteIndex = -1;
     }
 
-    transitionTime = displayTimes[siteIndex] * 100;
+    transitionTime = displayTimes[siteIndex] * 1000;
     nextSlide();
 }
 
