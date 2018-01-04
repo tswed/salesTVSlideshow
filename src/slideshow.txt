@@ -1,6 +1,14 @@
-http://salestvmini:5601/app/kibana#/dashboard/536eb640-f47e-11e6-a5f8-e3a3953e6f44?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1y,mode:quick,to:now))&_a=(description:'',filters:!(),options:(darkTheme:!t),panels:!((col:1,id:'63e43c70-f389-11e6-9397-f5d13e7a5137',panelIndex:1,row:3,size_x:6,size_y:9,type:visualization),(col:7,id:'2b1cfc60-f45b-11e6-9431-01eefae0216c',panelIndex:2,row:3,size_x:6,size_y:4,type:visualization),(col:7,id:'2a736630-f46c-11e6-82d4-d10787dd1d9e',panelIndex:3,row:7,size_x:6,size_y:4,type:visualization),(col:1,id:'10fa98d0-f46d-11e6-bee0-a97ce8589535',panelIndex:4,row:1,size_x:12,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),timeRestore:!t,title:'R12+Month+Bible+Sales',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-4:(vis:(defaultColors:('0+-+100':'rgb(0,104,55)')))),viewMode:view)&embed=true| R12 Months Bible Sales| 120;
+http://salestvmini:5601/app/kibana#/dashboard/536eb640-f47e-11e6-a5f8-e3a3953e6f44?_g=
+(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1y,mode:quick,to:now))&_a=
+(description:'',filters:!(),options:(darkTheme:!t),panels:!((col:1,id:'63e43c70-f389-11e6-9397-f5d13e7a5137',
+panelIndex:1,row:3,size_x:6,size_y:9,type:visualization),(col:7,id:'2b1cfc60-f45b-11e6-9431-01eefae0216c',
+panelIndex:2,row:3,size_x:6,size_y:4,type:visualization),(col:7,id:'2a736630-f46c-11e6-82d4-d10787dd1d9e',
+panelIndex:3,row:7,size_x:6,size_y:4,type:visualization),(col:1,id:'10fa98d0-f46d-11e6-bee0-a97ce8589535',
+panelIndex:4,row:1,size_x:12,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),
+timeRestore:!t,title:'R12+Month+Bible+Sales',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),
+P-4:(vis:(defaultColors:('0+-+100':'rgb(0,104,55)')))),viewMode:view)&embed=true| R12 Months Bible Sales| 120;
 
-https://maps.youversion.com/crossway| | 240;
+maps.youversion.com/crossway| | 240;
 
 http://salestvmini:5601/app/kibana#/dashboard/71b45db0-f46c-11e6-82d4-d10787dd1d9e?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-1M%2FM,mode:quick,to:now-1M%2FM))&_a=(description:'',filters:!(),options:(darkTheme:!t),panels:!((col:1,id:'63e43c70-f389-11e6-9397-f5d13e7a5137',panelIndex:1,row:3,size_x:6,size_y:9,type:visualization),(col:7,id:'2b1cfc60-f45b-11e6-9431-01eefae0216c',panelIndex:2,row:3,size_x:6,size_y:4,type:visualization),(col:7,id:'2a736630-f46c-11e6-82d4-d10787dd1d9e',panelIndex:3,row:7,size_x:6,size_y:4,type:visualization),(col:1,id:'10fa98d0-f46d-11e6-bee0-a97ce8589535',panelIndex:4,row:1,size_x:12,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),timeRestore:!t,title:'Current+Month+Bible+Sales',uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-4:(vis:(defaultColors:('0+-+100':'rgb(0,104,55)')))),viewMode:view)&embed=true| November Bible Sales| 120;
 

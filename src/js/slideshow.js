@@ -9,46 +9,49 @@ var allSlideInfo = [];
 var displayTimes = [];
 var slideTitles = [];
 var transitionTime = 60000;
-var menu;
 var content;
-var currentDate = new Date();
-var isDuringDay;
 var advanceSlide;
 
 window.onload = loadPage;
 
+
 function loadPage() {
     content = document.getElementById('slideFrame');
-    menu = document.getElementById('menu');
 
     readFile("../slideshow.txt");
 
     content.src = URLs[0];
 
+    displayTime();
     displayTitle(0);
 
-    transitionTime = displayTimes[siteIndex] * 1000;
+    transitionTime = displayTimes[siteIndex] * 100;
 
     advanceSlide = setTimeout(changeSlide, transitionTime);
 }
 
+function displayTime() {
+    var currentDate = new Date();
+    var clock = document.getElementById('clock');
+    var hours = currentDate.getHours() ? currentDate.getHours() - 12 : currentDate.getHours();
+    var minutes = currentDate.getMinutes() < 10 ? "0" + currentDate.getMinutes() : currentDate.getMinutes();
+    var am_pm = currentDate.getHours() >= 12 ? "PM" : "AM";
+
+    hours = hours < 10 ? "0" + hours : hours;
+
+    clock.innerHTML = hours + ":" + minutes + " " + am_pm;
+}
+
 function changeSlide() {
-    isDuringDay = checkTime();
+    content.src = URLs[++siteIndex];
+    displayTitle(siteIndex);
 
-    if (isDuringDay) {
-        content.src = URLs[++siteIndex];
-        displayTitle(siteIndex);
-
-        if (siteIndex > URLs.length) {
-            siteIndex = -1;
-        }
-
-        transitionTime = displayTimes[siteIndex] * 1000;
-        nextSlide();
+    if (siteIndex > URLs.length) {
+        siteIndex = -1;
     }
-    else {
-        setTimeout(changeSlide, 0);
-    }
+
+    transitionTime = displayTimes[siteIndex] * 100;
+    nextSlide();
 }
 
 function displayTitle(siteIndex) {
@@ -57,13 +60,6 @@ function displayTitle(siteIndex) {
 
 function nextSlide() {
     advanceSlide = setTimeout(changeSlide, transitionTime);
-}
-
-function checkTime() {
-    if (currentDate.getHours() >= 8 && currentDate.getHours() <= 17) {
-        return true;
-    }
-    return false;
 }
 
 function readFile(file) {
