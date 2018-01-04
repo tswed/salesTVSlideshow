@@ -22,7 +22,7 @@ function loadPage() {
 
     content.src = URLs[0];
 
-    displayTime();
+    setInterval(updateClock, 1000);
     displayTitle(0);
 
     transitionTime = displayTimes[siteIndex] * 1000;
@@ -30,7 +30,7 @@ function loadPage() {
     advanceSlide = setTimeout(changeSlide, transitionTime);
 }
 
-function displayTime() {
+function updateClock() {
     var currentDate = new Date();
     var clock = document.getElementById('clock');
     var hours = currentDate.getHours() ? currentDate.getHours() - 12 : currentDate.getHours();
