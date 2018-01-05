@@ -33,7 +33,7 @@ function loadPage() {
 function updateClock() {
     var currentDate = new Date();
     var clock = document.getElementById('clock');
-    var hours = currentDate.getHours() ? currentDate.getHours() - 12 : currentDate.getHours();
+    var hours = currentDate.getHours() > 12 ? currentDate.getHours() - 12 : currentDate.getHours();
     var minutes = currentDate.getMinutes() < 10 ? "0" + currentDate.getMinutes() : currentDate.getMinutes();
     var am_pm = currentDate.getHours() >= 12 ? "PM" : "AM";
 
